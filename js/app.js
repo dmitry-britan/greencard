@@ -439,11 +439,10 @@ $(document).ready(function(){
 
 			$proposListContainer.queue("ajax", function(){
 				var 
-					 $type = $vehicleParamSelects.filter(":not([disabled])")
-					,type = $vehicleParamSelects.filter(":not([disabled])").val()
+					type = $vehicleSelect.find("option:selected").val()
 					,coverageArea = $coverageArea.val()
-					,contractPeriod = $contractPeriod.val()
-								;
+					,contractPeriod = $contractPeriod.val();
+
 				var changeHeader =function($toggleFilters){
 					var 
 						selectVal = function($Select){
