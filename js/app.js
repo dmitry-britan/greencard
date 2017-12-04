@@ -175,11 +175,10 @@ $(document).ready(function(){
 		hideContainerAjax($containerAjax);
 
             var 
-            	 type = $("#vehicleForm input[name='type']:checked").val()
+            	 type = $("#vehicleForm input[name='vehicle']:checked").val()
             	,coverageArea = $("#vehicleForm").find("#coverageArea option:selected").val()
             	,contractPeriod = $("#vehicleForm").find("#contractPeriod option:selected").val()
             	;
-
 		$containerAjax.queue("ajax", function(){
 
 			$.ajax({
