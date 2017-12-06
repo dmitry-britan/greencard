@@ -244,3 +244,6 @@
 .selectric-items .selectric-group li {
   padding-left: 25px;
 }
+.selectric-coverage-area{
+  min-width: 275px;
+}

@@ -101,14 +101,14 @@
                     <span class="b-calculator__heading">Направление и срок поездки</span>
                     <div class="b-select__container_propos">
                         <label for="coverageArea" class="b-label_registration">Куда едете?</label>
-                        <select name="coverageArea" class="js-selectric" id="coverageArea">
+                        <select name="coverageArea" class="coverage-area js-selectric" id="coverageArea">
                             <option value="1" selected>Белорусь, Молдова, Россия</option>
                             <option value="2">Европа</option>
                         </select>
                     </div>
                     <div class="b-select__container_propos">
                         <label for="contractPeriod" class="b-label_registration">Период действия</label>
-                        <select name="contractPeriod" class="js-selectric" id="contractPeriod">
+                        <select name="contractPeriod" class="contract-period js-selectric" id="contractPeriod">
                             <option value="FIFTEEN_DAYS">15 дней</option>
                             <option value="ONE_MONTH">1 месяц</option>
                             <option value="TWO_MONTHS">2 месяца</option>
@@ -126,10 +126,12 @@
                     </div>
                 </div>
 
-                <button type="submit" class="b-form__submit_vehicle">
-                    <span class="b-text_btn">Узнать стоимость “Зеленки”</span>
-                    <span class="fa fa-angle-right" aria-hidden="true"></span>
-                </button>
+                <div class="b-calculator__action">
+                    <button type="submit" class="b-form__submit_vehicle">
+                        <span class="b-text_btn">Узнать стоимость “Зеленки”</span>
+                        <span class="fa fa-angle-right" aria-hidden="true"></span>
+                    </button>
+                </div>
             </form>
             <ul class="b-crumbs_aside">
                 <li class="b-crumbs__item_aside b-item_active">
