@@ -456,7 +456,7 @@ $(document).ready(function(){
 						
 					$toggleFilters.text(headerText);
 				}
-				changeHeader($toggleFilters);
+				//changeHeader($toggleFilters);
 
 				$.ajax({
 	            	type: "get",

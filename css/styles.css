@@ -89,11 +89,11 @@ input {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#017f4e+0,7b3db1+0,653294+100 */
     background: #017f4e;
     /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover, #017f4e 0%, #7b3db1 0%, #017f4e 100%);
+    background: -moz-radial-gradient(center, ellipse cover, #017f4e 0%, #01a060 0%, #017f4e 100%);
     /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, #017f4e 0%, #7b3db1 0%, #017f4e 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #017f4e 0%, #01a060 0%, #017f4e 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, #017f4e 0%, #7b3db1 0%, #017f4e 100%);
+    background: radial-gradient(ellipse at center, #017f4e 0%, #01a060 0%, #017f4e 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#017f4e', endColorstr='#017f4e', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
@@ -3500,7 +3500,7 @@ a.b-callback_footer:hover {
 /* ====== NEW PROPOSITIONS ====== */
 
 .b-propositions__link {
-    color: #5c2e87;
+    color: #017f4e;
     text-decoration: underline;
     cursor: pointer;
 }
