@@ -1016,7 +1016,8 @@ $(document).ready(function(){
 			,$newPostRow = $(".js-np-address").parents(".row_form")
 			,$bySelfAddress = $(".js-self-address")
 			,$commentField = $(".js-comment-order")
-			,$orderByYourselfNavigate = $orderBlock.find(".js-step-nav")
+			,$orderByYourselfNavigate = $("#bySelf").find(".js-step-nav")
+			,$orderByUploadNavigate = $("#byUpload").find(".js-step-nav")
 			;
 		
 		// show only selected buy method
@@ -1057,15 +1058,44 @@ $(document).ready(function(){
 			var stepId = $(this).data('step');
 			var isEmptyField = false;
 
-			$('.step--'+(stepId-1)+' .b-form__block .b-form__cell').each(function(){
+			$('#bySelf .step--'+(stepId-1)+' .b-form__block .b-form__cell').each(function(){
 				if (!$(this).find('input').val()){
 					$(this).addClass('b-cell_error');
 					isEmptyField = true;
 				}
 			});
-			if ( !$('.step--'+(stepId-1)+' .b-form__block .b-cell_error').length && !isEmptyField ){
-				$('.step').removeClass('is--active');
-				$('.step--'+stepId).addClass('is--active');
+			if ( !$('#bySelf .step--'+(stepId-1)+' .b-form__block .b-cell_error').length && !isEmptyField ){
+				$('#bySelf .step').removeClass('is--active');
+				$('#bySelf .step--'+stepId).addClass('is--active');
+
+				switch (stepId) {
+					case 2:
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepOne'});
+						break;
+					case 3:
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepTwo'}); 
+					break;
+					default:
+						break;
+				}
+			}
+		});
+
+		// Order by upload - steps navigation
+		$orderByUploadNavigate.on('click', function(e){
+			e.preventDefault();
+			var stepId = $(this).data('step');
+			var isEmptyField = false;
+			console.log(stepId);
+			$('#byUpload .step--'+(stepId-1)+' .b-form__block .b-form__cell').each(function(){
+				if (!$(this).find('input').val()){
+					$(this).addClass('b-cell_error');
+					isEmptyField = true;
+				}
+			});
+			if ( !$('#byUpload .step--'+(stepId-1)+' .b-form__block .b-cell_error').length && !isEmptyField ){
+				$('#byUpload .step').removeClass('is--active');
+				$('#byUpload .step--'+stepId).addClass('is--active');
 
 				switch (stepId) {
 					case 2:
