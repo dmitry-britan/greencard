@@ -931,8 +931,9 @@ a.b-menu__heading:hover{
 }
 
 .b-form_vehicle {
-    display: inline-block;
+    display: block;
     max-width: 599px;
+    margin: 0 auto;
 }
 
 .b-vehicles {
