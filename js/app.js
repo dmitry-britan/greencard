@@ -180,7 +180,6 @@ $(document).ready(function(){
             	,contractPeriod = $("#vehicleForm").find("#contractPeriod option:selected").val()
             	;
 		$containerAjax.queue("ajax", function(){
-
 			$.ajax({
             	type: "get",
             	data: {type: type, coverageArea: coverageArea, contractPeriod: contractPeriod},
@@ -440,8 +439,8 @@ $(document).ready(function(){
 			$proposListContainer.queue("ajax", function(){
 				var 
 					type = $vehicleSelect.find("option:selected").val()
-					,coverageArea = $coverageArea.val()
-					,contractPeriod = $contractPeriod.val();
+					,coverageArea = $("#coverageArea option:selected").val()
+					,contractPeriod = $("#contractPeriod option:selected").val();
 
 				var changeHeader =function($toggleFilters){
 					var 
