@@ -5526,7 +5526,12 @@ a.b-callback_footer:hover {
 
 
 /*======= SEO TEXT =======*/
-
+.is--color-green{
+    color: #017f4e;
+}
+.is--text-lg{
+    font-size: 24px;
+}
 .b-container_seo {
     max-width: 798px;
     padding-right: 15px;
@@ -5539,6 +5544,12 @@ a.b-callback_footer:hover {
 .b-section_seoText {
     padding-top: 30px;
     padding-bottom: 60px;
+}
+.b-section_seoText.is--pb-0 {
+    padding-bottom: 0;
+}
+.b-section_seoText strong {
+    font-weight: bold;
 }
 
 .b-seo__top {
