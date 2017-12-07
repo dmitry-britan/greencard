@@ -3536,6 +3536,7 @@ a.b-callback_footer:hover {
 }
 .b-container__calculator_vehicle .b-select__container_propos {
     margin-right: 130px;
+    margin-bottom: 20px;
 }
 .b-container__calculator_vehicle .b-select__container_propos:last-child {
     margin-right: 0;
@@ -4445,6 +4446,16 @@ a.b-callback_footer:hover {
     float: none;
 }
 
+.is--byself .b-form__cell_comment {
+    width: 55%;
+}
+.is--byself .b-form__cell_map{
+    width: 40%;
+    float: right;
+    margin-top: -200px;
+    margin-right: 0!important;
+}
+
 .b-comment {
     white-space: normal;
     -webkit-box-sizing: border-box;
@@ -4472,6 +4483,9 @@ a.b-callback_footer:hover {
 .b-map_finalize {
     width: 100%;
     height: 240px;
+}
+.is--byself .b-map_finalize{
+    height: 157px;
 }
 
 .b-form__pay {
@@ -4603,8 +4617,8 @@ a.b-callback_footer:hover {
     font-weight: 300;
 }
 
-.b-form__text.is--mt-10 {
-    margin-top: 10px;
+.b-form__text.is--mt-2 {
+    margin-top: 2px;
 }
 
 .b-button_files {
@@ -5964,9 +5978,8 @@ a.b-callback_footer:hover {
     .b-form__cell #address_insured {
         width: 236px;
     }
-    .b-comment_finalize,
-    .b-map_finalize {
-        width: 376px;
+    .b-comment_finalize{
+        width: 100%;
     }
     .b-finalize__btns_method {
         max-width: 736px;
@@ -6594,8 +6607,7 @@ a.b-callback_footer:hover {
     .b-form__cell #address_insured {
         width: 222px;
     }
-    .b-comment_finalize,
-    .b-map_finalize {
+    .b-comment_finalize {
         width: 348px;
     }
     .b-wrap_files,
@@ -6828,6 +6840,18 @@ a.b-callback_footer:hover {
     }
     .b-form__cell_comment {
         /* margin-bottom: 0;*/
+    }
+    .is--byself .b-form__cell_comment{
+        width: 100%;
+    }
+    .is--byself .b-form__cell_map{
+        float: none;
+        width: auto;
+        margin-right:70px;
+        margin-top: 20px;
+    }
+    .b-form__heading_finalize.is--mr-40 {
+        margin-right: 20px;
     }
     .b-form__cell_map label {
         display: none;

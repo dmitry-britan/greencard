@@ -1303,7 +1303,7 @@ $(document).ready(function(){
 						$newPostRow.addClass("hidden");
 						// елементи Самовивоза
 						$selfMap.removeClass("hidden");
-						$commentField.removeClass("hidden");
+						$commentField.removeClass("hidden").addClass("is--byself");
 						$bySelfAddress.removeClass("hidden");
 						break;
 					case "byCourier":	// кур'єр
@@ -1320,7 +1320,7 @@ $(document).ready(function(){
 									.parent().removeClass("hidden");
 						$courierAddr.prop("disabled", false).removeClass("hidden")
 									.parent().removeClass("hidden");
-						$commentField.removeClass("hidden");
+						$commentField.removeClass("hidden").removeClass("is--byself");
 						break;
 					case "byNP":	// НП
 						// елементи Кур'єра
@@ -1333,7 +1333,7 @@ $(document).ready(function(){
 						$bySelfAddress.addClass("hidden");
 						// елементи НП						
 						$newPostRow.removeClass("hidden");
-						$commentField.addClass("hidden");
+						$commentField.addClass("hidden").removeClass("is--byself");
 						$newPostRegion.each(function(){
 							$(this).prop("disabled", false).removeClass("hidden");
 							$(this).selectric("refresh");
