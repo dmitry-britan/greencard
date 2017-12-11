@@ -7430,7 +7430,9 @@ a.b-callback_footer:hover {
         right: 20px;
     }
 }
-
+.b-calculator__block.is--mobile-only{
+    display: none;
+}
 @media (max-width: 480px) {
     .b-section_crumbs,
     .b-propos__guaranties,
@@ -7439,6 +7441,14 @@ a.b-callback_footer:hover {
     .b-section_seoText,
     .b-vehicle__params {
         display: none;
+    }
+    .b-vehicles{
+        height: 0;
+        overflow: hidden;
+        border: 0;
+    }
+    .b-calculator__block.is--mobile-only{
+        display: block;
     }
     .b-calculator__heading_main {
         margin-top: 10px;
@@ -7451,7 +7461,7 @@ a.b-callback_footer:hover {
         max-width: 336px;
     }
     .b-vehicles {
-        margin: 15px auto;
+        margin: 0 auto;
         width: 280px;
     }
     .b-vehicle {

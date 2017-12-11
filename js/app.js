@@ -2405,7 +2405,21 @@ $(document).ready(function(){
 	$(".js-scrollto-calc").on("click", function(event){
 		event.preventDefault();
 		var offsetBlock = $(".js-ajax_calculator").offset().top;
-		
+
 		$('html, body').animate({ scrollTop: offsetBlock}, 400);
 	});
+
+	
+	// выбор транспорта на моб версии
+	(function(){
+		// при выборе транспортного средства, передаем значение в скрытый блок, 
+		// который дальше обрабатывается внутренней логикой
+		$('#vehicleList').on('change', function(){
+			var vehicleType = $('#vehicleList option:selected').val();
+			
+			$('#vehicleForm input[type="radio"]').removeAttr('checked');
+			$('#vehicleForm input[id="'+vehicleType+'"]').attr('checked', 'checked');
+		});
+
+	})();
 });
