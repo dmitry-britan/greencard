@@ -2401,4 +2401,11 @@ $(document).ready(function(){
 
 	$("#toTop").trigger("click");	// scroll to top after page is loaded
 
+	// scroll to top
+	$(".js-scrollto-calc").on("click", function(event){
+		event.preventDefault();
+		var offsetBlock = $(".js-ajax_calculator").offset().top;
+		
+		$('html, body').animate({ scrollTop: offsetBlock}, 400);
+	});
 });
