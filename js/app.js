@@ -2442,7 +2442,7 @@ $(document).ready(function(){
 				}
 			});
 
-		}, 1000);
+		}, 30000);
 
 		$modalClose.on('click', function(e){
 			e.preventDefault();
