@@ -3053,6 +3053,9 @@ a.b-callback_footer:hover {
 .b-exitPopup__content {
     max-width: 185px;
 }
+.b-modal_exitCallbackSuccess .b-modal__heading{
+    margin-top:50px;
+}
 
 
 /*

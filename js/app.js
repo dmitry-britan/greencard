@@ -2425,16 +2425,60 @@ $(document).ready(function(){
 
 	// popup on site leave
 	(function(){
+		var $leaveForm = $("#exitPopup");
+		var $modalOvl = $(".b-overlay_modal");
+		var $modalClose = $("#exitPopup .arcticmodal-close, .b-modal_exitCallbackSuccess .arcticmodal-close")
+		var $modals = $modalOvl.find(".b-modal");
+		var $modalError = $modals.filter(".b-modal_error");
+		var $modalExitCallbackSuccess = $(".b-modal_exitCallbackSuccess");
+		var exitPopupShow = true;
+	
 		setTimeout(function(){
 			$(document).mouseleave(function (e) {
-				if ( e.clientY <= 0 ){
-					$('#exitPopup').arcticmodal({
-						closeOnOverlayClick: true,
-						closeOnEsc: true
-					});
+				if ( e.clientY <= 0 && exitPopupShow ){
+					console.log($leaveForm.length);
+					$modalOvl.fadeIn();
+					$leaveForm.fadeIn();
 				}
 			});
 
-		}, 30000);
+		}, 1000);
+
+		$modalClose.on('click', function(e){
+			e.preventDefault();
+			
+			$modalOvl.fadeOut();
+			$(this).parents('.b-modal').fadeOut;
+		})
+		// leave form submission
+		$leaveForm.submit(function(event){
+			event.preventDefault();
+			var data = $(this).serialize();
+
+			$.ajax({
+					type : 'get',
+					url: './ajax/create-callback.json',
+					data : data,
+					cache : false,
+					success : function(response){
+							if (response.status == true) {
+									// in a case of Ajax success:
+									$modals.fadeOut();
+									$modalOvl.fadeIn();
+									$modalExitCallbackSuccess.fadeIn();
+									$leaveForm.remove();
+									exitPopupShow = false;
+							} else {
+								$modals.fadeOut();
+								$modalOvl.fadeIn();
+								$modalError.fadeIn();	// show error modal
+							}
+					},
+					error: function(){
+							alert('There is an error!');
+					}
+			});
+		});
+
 	})();
 });
