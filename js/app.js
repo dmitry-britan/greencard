@@ -2425,7 +2425,8 @@ $(document).ready(function(){
 
 	// popup on site leave
 	(function(){
-		var $leaveForm = $("#exitPopup");
+		var $leavePopup = $("#exitPopup");
+		var $leaveForm = $(".js-form_exitCallback");
 		var $modalOvl = $(".b-overlay_modal");
 		var $modalClose = $("#exitPopup .arcticmodal-close, .b-modal_exitCallbackSuccess .arcticmodal-close")
 		var $modals = $modalOvl.find(".b-modal");
@@ -2436,9 +2437,8 @@ $(document).ready(function(){
 		setTimeout(function(){
 			$(document).mouseleave(function (e) {
 				if ( e.clientY <= 0 && exitPopupShow ){
-					console.log($leaveForm.length);
 					$modalOvl.fadeIn();
-					$leaveForm.fadeIn();
+					$leavePopup.fadeIn();
 				}
 			});
 
@@ -2466,7 +2466,7 @@ $(document).ready(function(){
 									$modals.fadeOut();
 									$modalOvl.fadeIn();
 									$modalExitCallbackSuccess.fadeIn();
-									$leaveForm.remove();
+									$leavePopup.remove();
 									exitPopupShow = false;
 							} else {
 								$modals.fadeOut();
