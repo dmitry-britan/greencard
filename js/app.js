@@ -2422,4 +2422,19 @@ $(document).ready(function(){
 		});
 
 	})();
+
+	// popup on site leave
+	(function(){
+		setTimeout(function(){
+			$(document).mouseleave(function (e) {
+				if ( e.clientY <= 0 ){
+					$('#exitPopup').arcticmodal({
+						closeOnOverlayClick: true,
+						closeOnEsc: true
+					});
+				}
+			});
+
+		}, 30000);
+	})();
 });
