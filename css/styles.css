@@ -6148,9 +6148,12 @@ a.b-callback_footer:hover {
     .b-finalize__btn_method {
         margin-right: 35px;
     }
+    .step__action {
+        padding-right: 6px;
+    }
     .b-form__cell_comment,
     .b-form__cell {
-        margin-right: 45px;
+        margin-right: 25px;
     }
     .b-form__delivery .b-form__heading_finalize {
         margin-bottom: 5px;
@@ -6950,6 +6953,9 @@ a.b-callback_footer:hover {
         margin-bottom: 20px;
     }
     /* stage 3 styles*/
+    .step__action {
+        text-align: center;
+    }
     .b-details_finalize {
         margin-bottom: 0;
         width: 272px;
@@ -7214,7 +7220,7 @@ a.b-callback_footer:hover {
         margin-bottom: 15px;
     }
     .b-form__submit_pay {
-        margin-left: 302px;
+        /* margin-left: 302px; */
     }
     /*    stage thanks styles*/
     .b-thanks__col_left {
