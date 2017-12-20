@@ -1254,15 +1254,6 @@ a.b-menu__heading:hover{
     box-sizing: border-box;
 }
 
-.b-block_franshiza {
-    float: right;
-    width: 140px;
-}
-
-.b-calculator_vehicle .b-block_franshiza {
-    margin-right: 55px;
-}
-
 .b-block_checkbox {
     /*    margin-left: 50px;*/
     float: right;
@@ -6398,12 +6389,6 @@ a.b-callback_footer:hover {
     .b-propos__recalc .b-select__container_propos:nth-child(n) {
         width: 100%;
     }
-    .b-propos__recalc .b-select__container_propos.b-block_franshiza {
-        margin: 0 auto;
-        float: left;
-        clear: both;
-        width: 90%;
-    }
     .b-propositions__link {
         display: block;
     }
@@ -7719,12 +7704,6 @@ a.b-callback_footer:hover {
     .b-vehicle .svg-vehicle,
     .obj-vehicle {
         width: 50px;
-    }
-    .b-calculator_vehicle .b-block_franshiza {
-        margin: 0 auto;
-        float: left;
-        clear: both;
-        width: 90%;
     }
     .b-block_registration {
         width: 100%;
