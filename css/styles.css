@@ -4741,6 +4741,7 @@ a.b-callback_footer:hover {
 .b-info_order {
     margin-bottom: 30px;
     width: 606px;
+    min-width: 280px;
     -webkit-box-shadow: 0 0 30px 9px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 30px 9px rgba(0, 0, 0, 0.2);
     border-collapse: collapse;
