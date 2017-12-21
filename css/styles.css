@@ -5531,6 +5531,9 @@ a.b-callback_footer:hover {
 
 /*======= SEOMAP END =======*/
 
+.b-modal_callbackSuccess .b-modal__heading{
+    margin-top: 65px;
+}
 
 /*======= SEO TEXT =======*/
 .is--color-green{
