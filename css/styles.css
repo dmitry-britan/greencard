@@ -7610,6 +7610,9 @@ a.b-callback_footer:hover {
     .b-modal{
         max-width: 320px;
     }
+    .b-info_order td input[type="image"] {
+        max-width: 150px;
+    }
     .b-calculator__block.is--mobile-only{
         display: block;
     }
