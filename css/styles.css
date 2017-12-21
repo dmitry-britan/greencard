@@ -7607,6 +7607,9 @@ a.b-callback_footer:hover {
         overflow: hidden;
         border: 0;
     }
+    .b-modal{
+        width: 320px;
+    }
     .b-calculator__block.is--mobile-only{
         display: block;
     }
