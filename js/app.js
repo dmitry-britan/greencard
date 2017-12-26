@@ -188,7 +188,7 @@ $(document).ready(function(){
             	    alert('error');
             	},
             	success: function(response){
-            		dataLayer.push({'event': 'GAevent', 'eventCategory': 'OsagoChoise', 'eventAction': 'buttonClick'});
+            		dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardFind', 'eventAction': 'buttonClick'});
             	    $containerAjax.html(response);
             	    propositionsInit($containerAjax);
             	},
@@ -306,7 +306,7 @@ $(document).ready(function(){
 				var  nameOfCompany = $(this).parents(".js-proposition").attr("data-name")
 					,price = $(this).find(".b-text_btn").attr("data-fullprice")
 					;
-				dataLayer.push({'event': 'buySC', 'eventCategory': 'buyOsagoLanding', 'eventAction': nameOfCompany, 'eventLabel': price});	// GTM
+				dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardBuy', 'eventAction': 'buttonClick'});	// GTM
 
 				var proposNum = $(this).attr("data-proposition");	// номер пропозиції для підвантаження потрібної пропозиції
 				showOrderBlock(proposNum, $containerAjax);	// показуємо блок оформлення
@@ -661,7 +661,6 @@ $(document).ready(function(){
             	    alert('error');
             	},
             	success: function(response){
-					dataLayer.push({'event': 'GAevent', 'eventCategory': 'osagoAnketa', 'eventAction': 'buttonClick'});
             	    $containerAjax.html(response);
             	    orderBlockInit($containerAjax);
             	},
@@ -925,7 +924,6 @@ $(document).ready(function(){
 				
 				
 				if (bValid){
-					dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaPurchase'});
 					// $.ajax({
 					// 	url: form.action,
 					// 	type: form.method,
@@ -953,7 +951,7 @@ $(document).ready(function(){
 	                            // cache: false,
 	                            success: function(response) {
 	                            	// GTM
-	                            	dataLayer.push({'event': 'GAeventDocument', 'eventCategory': 'formSentOsagoLanding', 'eventAction': 'document'});
+	                            	dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardDocPurchase', 'eventAction': 'orderSend'});
 
 	                                $containerAjax.html(response);	// вставляємо сенкю
 	                            },
@@ -977,9 +975,9 @@ $(document).ready(function(){
 	                            success: function(response){
 	                            	// GTM
 	                            	if (form.id == 'formBySelf'){
-	                            		dataLayer.push({'event': 'GAeventForm', 'eventCategory': 'formSentOsagoLanding', 'eventAction': 'form'});
+	                            		dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardAnketaPurchase', 'eventAction': 'orderSend'});
 	                            	} else if(form.id == 'formByPhone'){
-	                            		dataLayer.push({'event': 'GAeventByPhone', 'eventCategory': 'formSentOsagoLanding', 'eventAction': 'by phone'});
+	                            		dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardPhone', 'eventAction': 'orderSend'});
 	                            	}
 
 	                                $containerAjax.html(response);	// вставляємо сенкю
@@ -1086,11 +1084,11 @@ $(document).ready(function(){
 
 				switch (stepId) {
 					case 2:
-						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepOne'});
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardAnketa', 'eventAction': 'orderSend'});
 						break;
 					case 3:
-						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepTwo'}); 
-					break;
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardAnketaStep', 'eventAction': 'orderSend'});
+						break;
 					default:
 						break;
 				}
@@ -1102,7 +1100,7 @@ $(document).ready(function(){
 			e.preventDefault();
 			var stepId = $(this).data('step');
 			var isEmptyField = false;
-			console.log(stepId);
+			
 			$('#byUpload .step--'+(stepId-1)+' .b-form__block .b-form__cell').each(function(){
 				if (!$(this).find('input').val()){
 					$(this).addClass('b-cell_error');
@@ -1115,10 +1113,10 @@ $(document).ready(function(){
 
 				switch (stepId) {
 					case 2:
-						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepOne'});
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardDocument', 'eventAction': 'orderSend'});
 						break;
 					case 3:
-						dataLayer.push({'event': 'GAevent', 'eventCategory': 'anketaOrder', 'eventAction': 'anketaStepTwo'}); 
+						dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardDocument', 'eventAction': 'orderSend'});
 					break;
 					default:
 						break;
@@ -2494,6 +2492,7 @@ $(document).ready(function(){
 									$modalExitCallbackSuccess.fadeIn();
 									$leavePopup.remove();
 									exitPopupShow = false;
+									dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardRecall', 'eventAction': 'orderSend'});
 							} else {
 								$modals.fadeOut();
 								$modalOvl.fadeIn();
