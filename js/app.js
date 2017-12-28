@@ -2491,7 +2491,6 @@ $(document).ready(function(){
 									$modalOvl.fadeIn();
 									$modalExitCallbackSuccess.fadeIn();
 									$leavePopup.remove();
-									exitPopupShow = false;
 									dataLayer.push({'event': 'GAevent', 'eventCategory': 'GreencardRecall', 'eventAction': 'orderSend'});
 							} else {
 								$modals.fadeOut();
