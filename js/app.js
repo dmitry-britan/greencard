@@ -2440,4 +2440,19 @@ $(document).ready(function(){
 		});
 
 	})();
+
+	
+	(function(){
+		var $window = $(window);
+
+		$('.js-footer-title').on('click', function(event) {
+			event.preventDefault();
+			if ($window.width() > 768) return false;
+
+			if ( !$(this).hasClass('is--active') ) {
+				$('.js-footer-title').removeClass('is--active').parent().find('.js-footer-list').slideUp(250);
+			}
+			$(this).toggleClass('is--active').parent().find('.js-footer-list').slideToggle(250);
+		});
+	})();
 });
